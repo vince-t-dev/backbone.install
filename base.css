@@ -1,0 +1,335 @@
+/* ============================================================================
+	Base
+===============================================================================
+	Version 1.0
+===============================================================================
+	1. General
+-------------------------------------------------------------------------------
+		1.1 General
+		1.2 Highlighted Text
+		1.3 Anchor
+		1.4 Form Wrap, Fields, Inputs
+-------------------------------------------------------------------------------
+	2. Plugin & JS Shortcodes
+-------------------------------------------------------------------------------
+		2.1 Password Input
+		2.2 Custom Select Stylsheet Template
+		2.3 Custom Radio/Checkbox Template
+		2.4 jQuery Placeholder
+-------------------------------------------------------------------------------
+	3. Layout & Content
+-------------------------------------------------------------------------------
+		3.1 Default Articlew
+		3.2 Typograph
+		3.3 Header
+		3.4 Footer
+		3.5 Main Menu
+				
+-------------------------------------------------------------------------------
+	1.1 Layout
+-------------------------------------------------------------------------------*/
+
+body {
+	color: #000;
+	font-family: "Helvetica", Arial, Tahoma, sans-serif;
+	position:relative;
+}
+
+#page {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+#content{
+}
+
+/*-------------------------------------------------------------------------------
+	1.2 Highlighted Text
+-------------------------------------------------------------------------------*/
+
+::-moz-selection{ background-color: #FF7600; color: #000; text-shadow: none;}
+::selection	 { background-color: #FF7600; color: #000; text-shadow: none;}
+ins			 { background-color: #FF7600; color: #000; text-decoration: none;}
+mark			 { background-color: #FF7600; color: #000; font-style: normal; font-weight: normal;}
+a:link			 { -webkit-tap-highlight-color: #FF7600;}
+	
+/*-------------------------------------------------------------------------------
+	1.3 Anchor
+-------------------------------------------------------------------------------*/
+
+a,
+a:hover,
+a:active {
+	-webkit-transition:color 200ms ease;
+	-moz-transition:color 200ms ease;
+	-o-transition:color 200ms ease;
+	transition:color 200ms ease;
+}
+
+/*-------------------------------------------------------------------------------
+	1.4 Form Wrap, Fields, Inputs (Empty Template)
+-------------------------------------------------------------------------------*/
+
+input, textarea, select{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;	
+}
+
+input,
+input:hover,
+input:focus,
+textarea,
+textarea:hover,
+textarea:focus{
+	transition:			250ms all ease;
+	-moz-transition:	250ms all ease;
+	-webkit-transition:	250ms all ease;
+	-o-transition:		250ms all ease;
+	-ms-transition:		250ms all ease;
+}
+
+.form input:hover,
+.form input:focus,
+.form textarea:hover,
+.form textarea:focus{
+	border-color:#111;
+}
+
+.form.style1 .field{ }
+.form.style1 .field label{ }
+.form.style1 .field input{ }
+.form.style1 .field textarea{ }
+.form.style1 .field select{ }
+
+.form.style1 .field label.error{
+	display:none !important;
+}
+
+.form.style1 .field input.error,
+.form.style1 .field textarea.error,
+.form.style1 .field select.error{
+	border-color:red !important;
+}
+
+/*-------------------------------------------------------------------------------
+	2.1 Password Input (Empty Template)
+-------------------------------------------------------------------------------*/
+
+.password-input-wrap{
+	position: relative;
+	width:100%;
+}
+
+.password-input-wrap .password-label{
+	position: absolute;
+	top:0;
+	left:0;
+	display:block;
+	cursor: text;
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.password-input-wrap.error .password-input{
+	border-color:red !important;
+}
+
+/*-------------------------------------------------------------------------------
+	2.2 Custom Select Stylsheet Template (Empty Template)
+-------------------------------------------------------------------------------*/
+
+.custom-select-wrap{
+	position:relative;
+}
+
+.custom-select{
+	z-index: 3;
+	position: relative;
+	cursor: pointer;
+	width:100% !important;
+}
+
+.custom-select option{
+	font-style: normal;
+	font:12px/25px HelveticaR,Helvetica,Arial;
+	padding:3px 5px;
+}
+
+.customSelect{
+}
+
+.customSelect:hover,
+.customSelect.customSelectOpen
+.customSelect.customSelectFocus{
+}
+
+.customSelectInner{
+	cursor: pointer;
+	display: block !important;
+	overflow: hidden;
+}
+
+.custom-select-wrap.has-value .customSelect{ }
+.custom-select-wrap.error .customSelect{ }
+.custom-select-wrap label.error{ }
+
+/*-------------------------------------------------------------------------------
+	2.3 Custom Radio/Checkbox Template (Empty Template)
+-------------------------------------------------------------------------------*/
+
+.ez-hide {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+.field .checkbox {
+	background: transparent url('/media/templates/dl-checkbox.png') 0 0 no-repeat;
+	display:inline-block;
+	width:24px;
+	height:24px;
+	float:left;
+	cursor:pointer;
+}
+
+.field .radio {
+	background: transparent url('/media/templates/dl-checkbox.png') 0 0 no-repeat;
+	display:inline-block;
+	width:24px;
+	height:24px;
+	float:left;
+	cursor:pointer;
+}
+
+.checkbox.checked { background-position: 0 -30px; }
+.radio.selected { background-position: 0 -30px; }
+.checkbox, .radio { zoom: 1; *display:inline; _height:24px; }
+
+/*-------------------------------------------------------------------------------
+	2.4 jQuery Placeholder
+-------------------------------------------------------------------------------*/
+
+.placeholder{ color:#666; }
+.placeholderFocus{ color:#000; }
+
+/*-------------------------------------------------------------------------------
+	3.1 Default Article
+-------------------------------------------------------------------------------*/
+
+.marticle .btext h1,
+.marticle .btext h2,
+.marticle .btext h3,
+.marticle .btext h4,
+.marticle .btext h5,
+.marticle .btext h6{
+	margin:0;
+	padding:0;
+}
+
+.marticle .btext h1{ font-size:35px; }
+.marticle .btext h2{ font-size:30px; }
+.marticle .btext h3{ font-size:25px; }
+.marticle .btext h4{ font-size:20px; }
+.marticle .btext h5{ font-size:17px; }
+.marticle .btext h6{ font-size:14px; }
+
+.marticle .btext ul{
+	margin-left:30px;
+	margin-bottom:15px;
+}
+
+.marticle .btext ul li{
+	list-style: disc;
+}
+
+.marticle .btext ol{
+	margin-left:30px;
+	margin-bottom:15px;
+}
+
+.marticle .btext ol li{
+	list-style: decimal;
+}
+
+.marticle .btext a{
+	color:blue;
+}
+
+.marticle .btext a:hover,
+.marticle .btext a:active{
+	color:blue;
+	text-decoration: underline;
+}
+
+.marticle .btext p{
+	margin-bottom:15px;
+}
+
+blockquote{
+	content:'\"';
+	display: block;
+	margin-bottom:15px;
+	font-style: italic;
+	font-family: Georgia !important;
+	font-style: italic !important;
+}
+
+blockquote p{
+	display: inline;
+	font-family: Georgia !important;
+	font-style: italic !important;
+}
+
+/*-------------------------------------------------------------------------------
+	3.2 Typograph
+-------------------------------------------------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 { font-weight: normal; }
+
+h1 { font-size: 40px; }
+h2 { font-size: 35px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+h5 { font-size: 15px; }
+h6 { font-size: 10px; }
+
+p {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+strong	{ font-weight: bold; }
+em		{ font-style: italic; }
+small	{ font-size: 85%; }
+
+/*-------------------------------------------------------------------------------
+	3.3 Header
+-------------------------------------------------------------------------------*/
+
+#header{}
+#logo{}
+
+/*-------------------------------------------------------------------------------
+	3.4 Footer
+-------------------------------------------------------------------------------*/
+
+#footer{}
+#copyright{}
+
+/*-------------------------------------------------------------------------------
+	3.5 Main Menu
+-------------------------------------------------------------------------------*/
+
+#main-nav{}
+#main-nav ul{}
+#main-nav li{}
+#main-nav li a{}
+#main-nav li a:hover,
+#main-nav li a:active,
+#main-nav li.active a{ }
